@@ -2,12 +2,10 @@
 this app is meant to help aid the DM to better handle the campaign.  it will only be local at first
 
 <!-- set up mac / linux  -->
-mac / linux
     python3 -m venv venv
     source venv/bin/activate
 
 <!-- windows -->
-windows
     python -m venv venv
     .\venv\Scripts\activate
 
