@@ -1,7 +1,18 @@
 # DND_DM_Panel
 this app is meant to help aid the DM to better handle the campaign.  it will only be local at first
 
-<!-- read setup.txt -->
+<!-- set up mac / linux  -->
+    python3 -m venv venv
+    source venv/bin/activate
+
+<!-- windows -->
+    python -m venv venv
+    .\venv\Scripts\activate
+
+<!-- install -->
+    pip install -r requirements.txt
+
+<!-- what i need to do -->
     TODO:
         Player:
             upload picture of player <----------------------[]
