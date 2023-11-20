@@ -6,10 +6,11 @@ load_dotenv()
 
 class Config:
     # General Configurations
-    DEBUG = True
-    host = '127.0.0.1'
-    PORT = 8000
-    secret_key = os.getenv("SECRET_KEY")
+    DEBUG           = True
+    host            = '127.0.0.1'
+    API_PORT        = 8000
+    WEB_SOCKET_PORT = 9000 # for handling communication between server and client
+    secret_key      = os.getenv("SECRET_KEY")
 
     # database
     # SQLALCHEMY_DATABASE_URI = 'mysql+pymysql://{user}:{passwd}@{url}/

@@ -23,26 +23,23 @@ app.add_middleware(
 def read_root():
     return {"Hello": "World"}
 
+def runner(debug):
+    import uvicorn
+    uvicorn.run(
+        "main:app", 
+        host=Config.host, 
+        port=Config.API_PORT, 
+        reload=debug
+        )
+
 
 def run(): # running the server
-    import uvicorn
 
     if Config.DEBUG == True:
-        uvicorn.run(
-            "main:app", 
-            host=Config.host, 
-            port=Config.PORT, 
-            reload=True
-        )
+        runner(True)
 
     else:
-        uvicorn.run(
-            "main:app", 
-            host=Config.host, 
-            port=Config.PORT, 
-            reload=False
-        )
-
+        runner(False)
 
 
 # if __name__ == "__main__":
