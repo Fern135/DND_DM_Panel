@@ -1,0 +1,9 @@
+fastapi 
+uvicorn
+requests # for handling linode aka akamai
+
+# database
+sqlalchemy
+
+# dotenv
+python-dotenv
