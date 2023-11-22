@@ -5,5 +5,8 @@ requests # for handling linode aka akamai
 # database
 sqlalchemy
 
+# mongoDB
+pymongo
+
 # dotenv
 python-dotenv

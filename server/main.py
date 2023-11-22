@@ -34,7 +34,6 @@ def runner(debug):
 
 
 def run(): # running the server
-
     if Config.DEBUG == True:
         runner(True)
 

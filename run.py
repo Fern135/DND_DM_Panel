@@ -25,8 +25,8 @@ def run_front_end():
 
     run_command("npm run start", cwd=react_project_path)
 
-server = multiprocessing.Process(target=run)  # Replace with your actual FastAPI server target
-front_end = multiprocessing.Process(target=run_front_end)
+server      = multiprocessing.Process(target=run)  # Replace with your actual FastAPI server target
+front_end   = multiprocessing.Process(target=run_front_end)
 
 processes = [server, front_end]
 
@@ -39,13 +39,13 @@ def runner():
         print("KeyboardInterrupt: Terminating all processes")
 
         for end_process in processes:
-            if end_process.is_alive():
+            if end_process.is_alive(): # check if process is alive then terminate
                 end_process.terminate()
                 end_process.join()
 
             else:
-                if end_process.is_alive() is False:
-                    print(f"process: {end_process.name} is not running")
+                if end_process.is_alive() is False: # if there's no process alive
+                    print(f"process: {end_process.name} is not running") # show the dead process
 
                     break
 
