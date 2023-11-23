@@ -3,7 +3,7 @@ from conf.config.config import Config
 from fastapi import FastAPI, Depends
 from fastapi.middleware.cors import CORSMiddleware
 
-from .routers.players.routes import playerRoutes
+from routers.players import routes
 
 app = FastAPI()
 
@@ -17,7 +17,7 @@ app.add_middleware(
 )
 
 # Include routers
-# app.include_router(example.router)
+app.include_router(routes.playerRoutes)
 
 @app.get("/")
 def read_root():
