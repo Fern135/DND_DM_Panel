@@ -4,16 +4,16 @@ list of routes for specific uses
 #==================== players ====================#
 [√] /api/player/new_player //<------------------- add new player
 [√] /api/players/player/<id> //<----------------- get player by id
-[] /api/players //<----------------------------- get all players
-[] /api/players/remove/<id> //<----------------- remove player by id
-[] /api/players/player/modify/<id> //<---------- modfy player by id, specify in json what to modify
+[]  /api/players //<----------------------------- get all players
+[]  /api/players/remove/<id> //<----------------- remove player by id
+[]  /api/players/player/modify/<id> //<---------- modfy player by id, specify in json what to modify
 
 #==================== enemies ====================#
-/api/player/new_enemy //<-------------------- add new enemy
-/api/enemies/enemy/<id> //<------------------ get enemy by id
-/api/enemies //<----------------------------- get all enemies
-/api/enemies/remove/<id> //<----------------- remove enemy by id
-/api/enemies/enemy/modify/<id> //<----------- modfy enemy by id, specify in json what to modify
+[] /api/player/new_enemy //<-------------------- add new enemy
+[] /api/enemies/enemy/<id> //<------------------ get enemy by id
+[] /api/enemies //<----------------------------- get all enemies
+[] /api/enemies/remove/<id> //<----------------- remove enemy by id
+[] /api/enemies/enemy/modify/<id> //<----------- modfy enemy by id, specify in json what to modify
 
 #==================== loot aka items that can be picked up ====================#
 /api/loots/loot/<id> //<--------------------- get loot by id
