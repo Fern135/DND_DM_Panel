@@ -3,7 +3,7 @@ from conf.config.config import Config
 from fastapi import FastAPI, Depends
 from fastapi.middleware.cors import CORSMiddleware
 
-# from .routers import example
+from .routers.players.routes import playerRoutes
 
 app = FastAPI()
 
@@ -21,7 +21,8 @@ app.add_middleware(
 
 @app.get("/")
 def read_root():
-    return {"Hello": "World"}
+    return { "SERVER": "Online!!!" }
+
 
 def runner(debug):
     import uvicorn
@@ -32,13 +33,14 @@ def runner(debug):
         reload=debug
         )
 
-
 def run(): # running the server
-    if Config.DEBUG == True:
-        runner(True)
+    match Config.DEBUG:
 
-    else:
-        runner(False)
+        case True:
+            runner(True) # auto reload
+
+        case _:
+            runner(False)
 
 
 # if __name__ == "__main__":

@@ -14,6 +14,9 @@ class Config:
 
     DB_NAME = "DND_PANEL"
 
+    # default db_return
+    db_return_title = "Server"
+
     # database
     # SQLALCHEMY_DATABASE_URI = 'mysql+pymysql://{user}:{passwd}@{url}/
 

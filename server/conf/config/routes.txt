@@ -1,0 +1,20 @@
+TODO:
+list of routes for specific uses 
+
+#==================== players ====================#
+/api/players/player/<id> //<----------------- get player by id
+/api/players //<----------------------------- get all players
+/api/players/remove/<id> //<----------------- remove player by id
+/api/players/player/modify/<id> //<---------- modfy player by id, specify in json what to modify
+
+#==================== enemies ====================#
+/api/enemies/enemy/<id> //<------------------ get enemy by id
+/api/enemies //<----------------------------- get all enemies
+/api/enemies/remove/<id> //<----------------- remove enemy by id
+/api/enemies/enemy/modify/<id> //<----------- modfy enemy by id, specify in json what to modify
+
+#==================== loot aka items that can be picked up ====================#
+/api/loots/loot/<id> //<--------------------- get loot by id
+/api/loots //<------------------------------- get all loot
+/api/loots/remove/<id> //<------------------- remove loot by id
+/api/loots/loot/modify/<id> //<-------------- modfy loot by id, specify in json what to modify
