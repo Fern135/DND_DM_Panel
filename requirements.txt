@@ -16,3 +16,9 @@ python-jose[all]
 
 # email validation
 validate_email_address
+
+# encryption
+cryptography
+
+# jwt 
+python-jose

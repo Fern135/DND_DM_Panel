@@ -17,6 +17,10 @@ def get_day_of_week():
     days_of_week = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
     return days_of_week[datetime.now().weekday()]
 
+def get_month():
+    Months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+    return Months[datetime.month]
+
 def is_leap_year(year):
     """Check if a given year is a leap year."""
     return (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0)

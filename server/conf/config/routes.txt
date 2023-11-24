@@ -1,22 +1,57 @@
 TODO:
 list of routes for specific uses 
 
-#==================== players ====================#
-[√] /api/player/new_player //<------------------- add new player
-[√] /api/players/player/<id> //<----------------- get player by id
-[]  /api/players //<----------------------------- get all players
-[]  /api/players/remove/<id> //<----------------- remove player by id
-[]  /api/players/player/modify/<id> //<---------- modfy player by id, specify in json what to modify
+[√] = implemented
+[]  = implementation tba
 
-#==================== enemies ====================#
-[] /api/player/new_enemy //<-------------------- add new enemy
-[] /api/enemies/enemy/<id> //<------------------ get enemy by id
-[] /api/enemies //<----------------------------- get all enemies
-[] /api/enemies/remove/<id> //<----------------- remove enemy by id
-[] /api/enemies/enemy/modify/<id> //<----------- modfy enemy by id, specify in json what to modify
+players/
+    add new player
+        [√] /api/player/new_player 
 
-#==================== loot aka items that can be picked up ====================#
-/api/loots/loot/<id> //<--------------------- get loot by id
-/api/loots //<------------------------------- get all loot
-/api/loots/remove/<id> //<------------------- remove loot by id
-/api/loots/loot/modify/<id> //<-------------- modfy loot by id, specify in json what to modify
+    upload / modify profile pic
+        []  /api/player/<id>/picture/<upload/modify>
+
+    upload / modify hero picture
+        []  /api/player/<id>/picture/<hero_sheet>/<campaing_id>
+
+    get player by id
+        [√] /api/players/player/<id> 
+
+    get all players
+        []  /api/players 
+
+    remove player by id
+        []  /api/players/remove/<id> 
+
+    modfy player by id, specify in json what to modify
+        []  /api/players/player/modify/<id> 
+
+enemy/
+    add new enemy
+        [] /api/player/new_enemy 
+
+    get enemy by id
+        [] /api/enemies/enemy/<id> 
+
+    get all enemies
+        [] /api/enemies
+
+    remove enemy by id
+        [] /api/enemies/remove/<id> 
+
+    modfy enemy by id, specify in json what to modify
+        [] /api/enemies/enemy/modify/<id> 
+
+
+loot/
+    get loot by id
+        [] /api/loots/loot/<id> 
+
+    get all loot
+        [] /api/loots 
+
+    remove loot by id
+        [] /api/loots/remove/<id> 
+
+    modfy loot by id, specify in json what to modify
+        [] /api/loots/loot/modify/<id> 

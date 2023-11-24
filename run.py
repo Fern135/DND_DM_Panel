@@ -18,7 +18,6 @@ def run_front_end():
     if os.path.exists(node_modules_path) and os.path.isdir(node_modules_path):
         print('The node_modules directory exists in the specified path.')
         run_command("npm install", cwd=react_project_path)
-
     else:
         print('The node_modules directory does not exist in the specified path.')
         run_command("npm install", cwd=react_project_path)
@@ -28,7 +27,7 @@ def run_front_end():
 server      = multiprocessing.Process(target=run)  # Replace with your actual FastAPI server target
 front_end   = multiprocessing.Process(target=run_front_end)
 
-processes = [server, front_end]
+processes: list = [server, front_end]
 
 def runner():
     try:

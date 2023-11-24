@@ -1,4 +1,4 @@
-from conf.config.config import Config
+from conf.config.config import DEBUG, HOST, API_PORT
 
 from fastapi import FastAPI, Depends
 from fastapi.middleware.cors import CORSMiddleware
@@ -28,17 +28,15 @@ def runner(debug):
     import uvicorn
     uvicorn.run(
         "main:app", 
-        host=Config.host, 
-        port=Config.API_PORT, 
+        host=HOST, 
+        port=API_PORT, 
         reload=debug
-        )
+    )
 
 def run(): # running the server
-    match Config.DEBUG:
-
+    match DEBUG:
         case True:
             runner(True) # auto reload
-
         case _:
             runner(False)
 
