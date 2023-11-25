@@ -1,7 +1,7 @@
 # max
 import openai
 # from ...conf.config.config import op_ai
-from ...conf.config.config import op_ai
+from ...conf.config.config import OP_AI
 
 # Low Temperature: Lowest Possible Value (0.0): deterministic and focused outputs
 
@@ -17,10 +17,10 @@ from ...conf.config.config import op_ai
 #   It may produce more unexpected and unconventional text.
 #   The generated text is likely to be more random and less constrained by typical language patterns.
 
-
+# TODO: fix the import and test this class. 
 class Max:
     def __init__(self) -> None:
-        openai.api_key = op_ai
+        openai.api_key = OP_AI
         self.token = 150
         
     def setPrompt(self, Prompt=None):

@@ -79,8 +79,7 @@ API_PORT        = os.getenv("m_port")
 WEB_SOCKET_PORT = os.getenv("web_socket_port") # for handling communication between server and client
 SECRET_KEY      = os.getenv("SECRET_KEY")
 ALGORITHM       = os.getenv("ALGORITHM")
-
-op_ai           = os.getenv("open_ai_key")
+OP_AI           = os.getenv("open_ai_key")
 
 # name of db. 
 DB_NAME = "DND_PANEL"
