@@ -6,7 +6,8 @@ def get_current_year():
 
 def get_current_month():
     """Get the current month."""
-    return datetime.now().month
+    Months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+    return Months[datetime.now().month]
 
 def get_current_day():
     """Get the current day of the month."""
@@ -16,10 +17,6 @@ def get_day_of_week():
     """Get the current day of the week."""
     days_of_week = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
     return days_of_week[datetime.now().weekday()]
-
-def get_month():
-    Months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
-    return Months[datetime.month]
 
 def is_leap_year(year):
     """Check if a given year is a leap year."""
