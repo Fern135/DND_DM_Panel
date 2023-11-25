@@ -22,3 +22,6 @@ cryptography
 
 # jwt 
 python-jose
+
+# chatgpt
+openai

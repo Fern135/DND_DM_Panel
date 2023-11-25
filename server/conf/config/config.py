@@ -73,13 +73,14 @@ def get_http_codes(code):
     return HTTP_CODES.get(code, "Unknown")
 
 # General Configurations
-DEBUG           = True
+DEBUG           = True # in production branch remove
 HOST            = '127.0.0.1'
-API_PORT        = 8000
-WEB_SOCKET_PORT = 9000 # for handling communication between server and client
+API_PORT        = os.getenv("m_port")
+WEB_SOCKET_PORT = os.getenv("web_socket_port") # for handling communication between server and client
 SECRET_KEY      = os.getenv("SECRET_KEY")
-ALGORITHM       = "HS256"
+ALGORITHM       = os.getenv("ALGORITHM")
 
+op_ai           = os.getenv("open_ai_key")
 
 # name of db. 
 DB_NAME = "DND_PANEL"
