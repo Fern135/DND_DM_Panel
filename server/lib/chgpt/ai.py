@@ -41,5 +41,5 @@ class Max:
 # Example usage
 user_input = "What is the meaning of life?"
 mx = Max()
-chat_response = mx.setPrompt(input).chat()
+chat_response = mx.setPrompt(user_input).chat()
 print(chat_response)
