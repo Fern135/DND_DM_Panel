@@ -1,6 +1,10 @@
 {
     "app-version" : 1,
-    "alpha"       : "True",
+    "app"         : {
+        "alpha"      : "True",
+        "beta"       : "False",
+        "production" : "False"
+    },
     "date-format" : "long",
     "time-format" : "12 hours"
 }

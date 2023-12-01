@@ -28,9 +28,9 @@ async def build(script_path, landing_page_repo_path, landing_page_exe_name):
 
     # Step 2: Replace the existing .exe in the landing page repo
     try:
-        exe_name = script_path.split(".")[0] + ".exe"
-        new_exe_path = os.path.join(landing_page_repo_path, landing_page_exe_name)
-        shutil.copy(exe_name, new_exe_path)
+        exe_name        = script_path.split(".")[0] + ".exe"
+        new_exe_path    = os.path.join(landing_page_repo_path, landing_page_exe_name)
+        await shutil.copy(exe_name, new_exe_path)
         click.echo(f'Replaced {exe_name} in the landing page repo.')
 
     except Exception as e:
@@ -41,8 +41,8 @@ async def build(script_path, landing_page_repo_path, landing_page_exe_name):
     repo = Repo(landing_page_repo_path)
 
     try:
-        # new_version = CONF['app-version']
-        # modifyConfig("app-version", new_version)
+        new_version = CONF['app-version']
+        modifyConfig("app-version", new_version)
 
         await repo.git.add(update=True)
         await repo.git.commit('-m', f'App uploaded to new Version: Version {CONF["app-version"]}')
@@ -53,7 +53,7 @@ async def build(script_path, landing_page_repo_path, landing_page_exe_name):
         click.echo(f'Failed to commit and push changes. Error: {str(e)}')
 
 if __name__ == '__main__':
-    if CONF['alpha'] == "True":
+    if CONF['app']['alpha'] == "True":
         click.echo("Not implemented yet")
 
     else:
