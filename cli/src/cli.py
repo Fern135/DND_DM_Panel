@@ -128,6 +128,11 @@ def pkg():
     # Place your package management logic here
 
 
+@click.command()
+def pkg_ver():
+    return 
+
+
 if __name__ == '__main__':
     cli()
 

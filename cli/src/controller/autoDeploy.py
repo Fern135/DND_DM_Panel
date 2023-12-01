@@ -41,9 +41,12 @@ async def build(script_path, landing_page_repo_path, landing_page_exe_name):
     repo = Repo(landing_page_repo_path)
 
     try:
-        repo.git.add(update=True)
-        repo.git.commit('-m', f'App uploaded to new Version: Version {CONF["app-version"]}')
-        repo.git.push()
+        # new_version = CONF['app-version']
+        # modifyConfig("app-version", new_version)
+
+        await repo.git.add(update=True)
+        await repo.git.commit('-m', f'App uploaded to new Version: Version {CONF["app-version"]}')
+        await repo.git.push()
         click.echo('Changes committed and pushed to the landing page repo.')
         
     except Exception as e:
@@ -55,11 +58,11 @@ if __name__ == '__main__':
 
     else:
         # Specify the path to your Python script, landing page repo, and landing page executable name
-        python_script_path      = '../../../run.py'
+        main_src                = '../../../run.py'
         landing_page_repo_path  = 'tba, not created yet >__<'
         landing_page_exe_name   = 'run.exe'
 
         # Run the asynchronous function
         asyncio.run(
-            build(python_script_path, landing_page_repo_path, landing_page_exe_name)
+            build(main_src, landing_page_repo_path, landing_page_exe_name)
         )
