@@ -10,13 +10,12 @@ from .src.cli import *
                         -> Nov 12, 12 
                         -> 11 / 12 / 12 
             -> time
-                -> default: 12:30 AM / PM
+                -> default: 12:30 AM / PM [√]
                     -> can be changed to 
-                        -> 24 hour format
+                        -> 24 hour format [√]
     
-        auto deploy 
-            -> will turn application into .exe and replace that in the .exe on the 
-            -> landing page for this panel
+        auto deploy -> for this app
+            -> will turn application into .exe and replace that in the .exe on the landing page for this panel
 
         file management
             -> create, read, update, and delete files in a specific directory 

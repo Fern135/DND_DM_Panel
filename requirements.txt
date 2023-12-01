@@ -1,6 +1,12 @@
+# the back bone
 fastapi 
+
+# for reloading and serving the fast api app
 uvicorn
-requests # for handling linode aka akamai
+
+# for handling linode aka akamai 
+# TODO: may delete
+requests 
 
 # database
 sqlalchemy
@@ -25,3 +31,9 @@ python-jose
 
 # chatgpt
 openai
+
+# for making a cli 
+click
+
+# for auto deploying
+gitpython
