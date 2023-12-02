@@ -41,9 +41,11 @@ async def build(script_path, landing_page_repo_path, landing_page_exe_name):
     repo = Repo(landing_page_repo_path)
 
     try:
+        #====================================== modify the app version on the config.json
         new_version = CONF['app-version']
         modifyConfig("app-version", new_version)
-
+        #======================================
+        
         await repo.git.add(update=True)
         await repo.git.commit('-m', f'App uploaded to new Version: Version {CONF["app-version"]}')
         await repo.git.push()
