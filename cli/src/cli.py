@@ -1,4 +1,7 @@
+#!/usr/bin/env python
+
 # will include the commands but not the controller handling said command
+import subprocess
 import click
 import os
 import shutil
@@ -132,51 +135,73 @@ def pkg():
 def pkg_ver():
     return 
 
+@click.command()
+def ping():
+    click.echo("Checking internet connection")
+
+    try:
+        # Run the ping command
+        result = subprocess.run(['ping', 'google.com'], capture_output=True, text=True, timeout=10)
+
+        # Check the return code
+        if result.returncode == 0:
+            click.echo("Success")
+            click.echo(result.stdout)
+        else:
+            click.echo("Success")
+            click.echo(result.stderr)
+
+    except subprocess.TimeoutExpired:
+        click.echo("timed out. Check your internet connection.")
+
+    except Exception as e:
+        click.echo(f"An error occurred: {e}")
+
 
 if __name__ == '__main__':
     cli()
 
 
 """
-Date Command:
-To display the default long-format date:
-python cli.py date
+    Date Command:
+        To display the default long-format date:
+            python cli.py date
 
-To display the date in short format:
-python cli.py date --format short
+    To display the date in short format:
+        python cli.py date --format short
 
-To display the date in a custom format:
-python cli.py date --format custom
+    To display the date in a custom format:
+        python cli.py date --format custom
 
-Time Command:
-    To display the default 12-hour time:
-    python cli.py time
+    Time Command:
+        To display the default 12-hour time:
+            python cli.py time
 
-    To display the time in 24-hour format:
-    python cli.py time --format 24-hour
+        To display the time in 24-hour format:
+            python cli.py time --format 24-hour
 
-Auto Deploy Command:
-    To execute the auto deploy command:
-    python cli.py audp
+    Auto Deploy Command:
+        To execute the auto deploy command:
+            python cli.py audp
 
-File Management Command:
-    To create a file named example.txt:
-        python cli.py file crt example.txt
+    File Management Command:
+        To create a file named example.txt:
+            python cli.py file crt example.txt
 
-    To read the content of the file:
-        python cli.py file rd example.txt
+        To read the content of the file:
+            python cli.py file rd example.txt
 
-    To update the content of the file:
-    python cli.py file upd example.txt
+        To update the content of the file:
+            python cli.py file upd example.txt
 
-    To move the file to another directory:
-        python cli.py file mv example.txt /path/to/destination/
+        To move the file to another directory:
+            python cli.py file mv example.txt /path/to/destination/
 
-    To convert the file to a different format:
-        python cli.py file conv example.txt
+        To convert the file to a different format:
+            python cli.py file conv example.txt
 
-Package Management Command:
+    Package Management Command:
 
-    To execute the package management command:
-    python cli.py pkg
+        To execute the package management command:
+            python cli.py pkg
 """
