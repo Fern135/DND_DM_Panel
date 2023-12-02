@@ -56,4 +56,9 @@ npm run set-up-win
             keep track of enemy health <---------------[]
             keep track of enemies in lobby <-----------[]
 
+            make random map generation 
 
+
+## Acknowledgements
+
+ - [Fernando](https://github.com/Fern135/DND_DM_Panel)
