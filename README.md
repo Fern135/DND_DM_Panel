@@ -59,6 +59,6 @@ npm run set-up-win
             make random map generation 
 
 
-## Acknowledgements
+## Authors
 
- - [Fernando](https://github.com/Fern135/DND_DM_Panel)
+ - [Fernando](https://github.com/Fern135)
