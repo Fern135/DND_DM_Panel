@@ -1,18 +1,47 @@
-# DND_DM_Panel
+## DND DM Panel
+# ``` this app is not ready yet ! ```
+
+# overview
 this app is meant to help aid the DM to better handle the campaign.  it will only be local at first
 
-<!-- set up mac / linux  -->
-    python3 -m venv venv
-    source venv/bin/activate
+## Features
+- List key features or functionalities.
 
-<!-- windows -->
-    python -m venv venv
-    .\venv\Scripts\activate
+### Prerequisites
+Make sure you have the following installed:
+- node js  (latest version)
+- python   (latest version)
 
-<!-- install -->
-    pip install -r requirements.txt
+### Getting Started
+- Step 1
+    ## mac / linux 
+        python3 -m venv venv
+        source venv/bin/activate
 
-<!-- what i need to do -->
+    ## windows
+        python -m venv venv
+        .\venv\Scripts\activate
+
+- setp 2
+    ## install what's needed
+        pip install -r requirements.txt
+
+    ##
+
+# install DND PANEL cli
+### development
+## mac or linux:
+``` 
+npm run set-up-mac 
+```
+
+## windows
+```
+npm run set-up-win 
+```
+
+
+## what i need to do
     TODO:
         Player:
             upload picture of player <----------------------[]
@@ -26,3 +55,5 @@ this app is meant to help aid the DM to better handle the campaign.  it will onl
             keep track of player health <--------------[]
             keep track of enemy health <---------------[]
             keep track of enemies in lobby <-----------[]
+
+
