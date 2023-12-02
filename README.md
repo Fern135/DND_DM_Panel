@@ -62,3 +62,9 @@ npm run set-up-win
 ## Authors
 
  - [Fernando](https://github.com/Fern135)
+
+
+## Support
+
+For support, email webdesignbusiness11@gmail.com or join our Slack channel.
+
