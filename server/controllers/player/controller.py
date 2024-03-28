@@ -1,11 +1,12 @@
+from fastapi.responses import JSONResponse
 from ...models.player import Player
 from lib.util.util import util
 
 class PlayerController(util):
 
     def __init__(self) -> None:
-        self.temp_pin           = self.generate_random_string(8)
-        self.temp_psw           = self.generate_random_string(16)
+        # self.temp_pin           = self.generate_random_string(8)
+        # self.temp_psw           = self.generate_random_string(16)
         self.pin                = None
         self.name               = None
         self.race               = None
@@ -44,6 +45,8 @@ class PlayerController(util):
 
     def get(self, id) -> dict:
         """Get player by ID"""
+        if id is None:
+            return JSONResponse( { "Server" : f"Could not find player with id: {id}" } )
 
         return self
     
